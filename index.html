@@ -11,7 +11,10 @@
             onMouseEnter: () => console.log("mouse enter"),
         }, "HELLO I AM A H3");
         const button = React.createElement("button", {
-            onClick: () => console.log("you clicked me")
+            onClick: () => console.log("you clicked me"),
+            sytle: {
+                backgroundColor: "tomato",
+            },
         }, "Click")
         const div = React.createElement("div", null, [h3, button])
         ReactDOM.render(div, root)
