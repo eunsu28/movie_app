@@ -9,19 +9,24 @@
     <script type = "text/babel">
         const root = document.getElementById("root")
 
-        const newH3 = (
+        const H3 = () => (
             <h3 id = "hello" onMouseEnter={() => console.log("mouse enter")}>
             Hello I am title    
         </h3>
         )
 
-        const newButton = (
+        const Button = () => (
             <button style = {{backgroundColor: "tomato",}} onClick = {() => console.log("you clicked me")}>
             click me
         </button>
         )
         
-        const div = React.createElement("div", null, [newH3, newButton])
-        ReactDOM.render(div, root)
+        const Container = () => ( <div>
+            <H3/>
+            <Button/>
+        </div>
+        )
+        ReactDOM.render(<Container/>, root)
     </script>
 </html>
+<!-- 무조건 대문자 for JSX html element -->
