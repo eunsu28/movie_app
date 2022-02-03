@@ -9,6 +9,14 @@
     <script type = "text/babel">
         const root = document.getElementById("root")
         let counter = 0;
+
+        const Title = () => {
+            <h3>total click: {counter}</h3>
+        }
+
+        const Button = () => {
+            <button onClick = {countUp}>click me</button>
+        }
         
         function countUp() {
             counter = counter + 1;
@@ -21,12 +29,12 @@
 
         const Container = () => ( 
         <div>
-            <h3>total click: {counter}</h3>
-            <button onClick = {countUp}>click me</button>
+            <Title />
+            <Button />
         </div>
         )
         ReactDOM.render(<Container/>, root)
     </script>
 </html>
 <!-- 무조건 대문자 for JSX html element -->
-<!-- {} -->
+<!-- function 식으로 elements를 만들면 언제든지 다시 쓸 수 있다 -->
