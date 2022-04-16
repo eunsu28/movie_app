@@ -9,9 +9,10 @@
     <script type = "text/babel">
         const root = document.getElementById("root");
         function App() {
-            const [counter, addCounter] = React.useState(0); //useState give to thing which is [0, f]
+            const [counter, setCounter] = React.useState(0); //useState give to thing which is [0, f]
             const onClick = () => {
-                addCounter(counter + 1) // we can use modifier as function to do something
+                //setCounter(counter + 1) // we can use modifier as function to do something
+                setCounter((current) => current +1)
             };
             return ( 
                 <div>
