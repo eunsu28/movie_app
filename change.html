@@ -51,7 +51,7 @@
                     <div>
                         <lable for="hours rounded">Hours rounded</lable>
                         <input 
-                            value={Math.round(amount / 60)} 
+                            value={flipped ? amount : Math.round(amount / 60)} 
                             disabled
                         />
                     </div>
